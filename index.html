@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><button class="btn" onclick="scrollToSection('about')">About</button></li>
+                    <li><button class="btn" onclick="window.open('https://drive.google.com/file/d/1jMlROqYqfuro90BXzPrB4-Ve3xI4S4e3/view?usp=sharing', '_blank')">Resume</button></li>
+                    <li><button class="btn" onclick="scrollToSection('achievements')">Achievements</button></li>
+                    <li><button class="btn" onclick="scrollToSection('skills')">Skills</button></li>
+                    <li><button class="btn" onclick="scrollToSection('projects')">Projects</button></li>
+                    <li><button class="btn" onclick="scrollToSection('certificates')">Certificates</button></li>
+                    <li><button class="btn" onclick="scrollToSection('contact')">Contact</button></li>
+                </ul>
+                
+            </nav>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Your about section content goes here...</p>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <p>Your achievements content goes here...</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-bar">
+                <span class="html">HTML</span>
+            </div>
+            <div class="skill-bar">
+                <span class="css">CSS</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Your projects content goes here...</p>
+        </section>
+
+        <section id="certificates">
+            <h2>Certificates</h2>
+            <div class="certificate-category">
+                <h3>Category 1</h3>
+                <p>Your certificates for category 1...</p>
+            </div>
+            <div class="certificate-category">
+                <h3>Category 2</h3>
+                <p>Your certificates for category 2...</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Your contact details go here...</p>
+        </section>
+
+        <footer>
+            <p>Thank you !</p>
+        </footer>
+    </div>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
