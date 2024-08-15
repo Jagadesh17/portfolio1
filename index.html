@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
+            <h1>PORTFOLIO</h1>
             <nav>
                 <ul>
                     <li><button class="btn" onclick="scrollToSection('about')">About</button></li>
@@ -19,13 +22,12 @@
                     <li><button class="btn" onclick="scrollToSection('certificates')">Certificates</button></li>
                     <li><button class="btn" onclick="scrollToSection('contact')">Contact</button></li>
                 </ul>
-                
             </nav>
         </header>
-        
+
         <section id="about">
             <h2>About Me</h2>
-            <p>Hi! I'm R Jagadesh.I am an inspired college student who is actively pursuing academic and personal development. I may explore new concepts, develop my abilities, and make connections with like-minded people during this time of discovery. I'm currently refining my data analysis skills with the goal of becoming a skilled data analyst. Equipped with an advanced understanding of data visualization, as well as fluency in many languages , I am eager to apply my analytical abilities to promote data-driven decision-making and creativity in the workplace.</p>
+            <p>Hi! I'm R Jagadesh. I am an inspired college student who is actively pursuing academic and personal development. I'm currently refining my data analysis skills with the goal of becoming a skilled data analyst. I am eager to apply my analytical abilities to promote data-driven decision-making and creativity in the workplace.</p>
         </section>
 
         <section id="achievements">
@@ -50,29 +52,64 @@
 
         <section id="certificates">
             <h2>Certificates</h2>
-            <div class="certificate-category">
-                <h3>Category 1</h3>
-                <p>Your certificates for category 1...</p>
+            <div class="certificate-category" onclick="openLightbox('certificate1.png', 'AI Certificate')">
+                <h3>AI</h3>
+                <img class="certificate-img" src="certificate1.png" alt="AI Certificate">
+                <p>View AI Certificate</p>
             </div>
-            <div class="certificate-category">
-                <h3>Category 2</h3>
-                <p>Your certificates for category 2...</p>
+            <div class="certificate-category" onclick="openLightbox('certificate2.png', 'Data Analysis Certificate')">
+                <h3>Data Analysis</h3>
+                <img class="certificate-img" src="certificate2.png" alt="Data Analysis Certificate">
+                <p>View Data Analysis Certificate</p>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Your contact details go here...</p>
+            <p>
+                <a href="mailto:r.jagadesh17114@gmail.com"><i class="fas fa-envelope"></i> r.jagadesh17114@gmail.com</a>
+            </p>
+            <p>
+                <a href="tel:+917305457074"><i class="fas fa-phone"></i> +917305457074</a>
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/rjd11" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </p>
+            <p>
+                <a href="https://github.com/Jagadesh17" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </p>
         </section>
 
         <footer>
-            <p>Thank you !</p>
+            <p>&copy; 2024 R Jagadesh. All Rights Reserved.</p>
         </footer>
+    </div>
+
+    <!-- Lightbox Structure -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
     <script>
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Lightbox functionality
+        function openLightbox(imgSrc, captionText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = captionText;
+            lightbox.style.display = 'block';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
         }
     </script>
 </body>
