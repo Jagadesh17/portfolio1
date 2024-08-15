@@ -1,6 +1,17 @@
 /* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Portfolio Title */
+.portfolio-title {
+    font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -134,6 +145,16 @@ footer {
 
 .skill-bar span.css {
     width: 85%;
+}
+
+/* Contact Details Styles */
+#contact p a {
+    color: #ffffff; /* White color for contact details */
+    text-decoration: none; /* Remove underline from links */
+}
+
+#contact p a:hover {
+    color: #00BFA6; /* Optional: Change color on hover */
 }
 
 /* Responsive Design */
